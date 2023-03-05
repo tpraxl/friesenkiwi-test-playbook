@@ -1,6 +1,6 @@
 ---
 - name: Setup, query and delete again an Uberspace
-  hosts: g_uberspace_argh
+  hosts: g_uberspace_my_example
   gather_facts: no
 
   collections:
