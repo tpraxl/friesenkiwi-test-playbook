@@ -1,0 +1,22 @@
+---
+- name: Setup, query and delete again an Uberspace
+  hosts: g_uberspace_argh
+  gather_facts: no
+
+  collections:
+    - friesenkiwi.uberspace
+
+  roles:
+    - role: uberspace_account
+      uberspace_action_setup: true
+
+  tasks:
+    - name: Setup application
+      debug:
+        msg: Do your things here
+
+    - name: Delete uberspace
+      vars:
+        uberspace_action_delete: yes
+      include_role:
+        name: uberspace_account
